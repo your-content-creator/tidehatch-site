@@ -220,6 +220,123 @@ section{padding:110px 0;position:relative}
 @media(max-width:900px){.proof{grid-template-columns:1fr}}
 @media(max-width:520px){.vidwrap{grid-template-columns:1fr}}
 
+/* demo */
+.demohead{display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;color:var(--muted);margin-bottom:16px}
+.app{position:relative}
+.app .bar em.dbadge{margin-left:auto;font-style:normal;font-size:11.5px;color:#ffd2ce;background:rgba(255,59,47,.1);border:1px solid rgba(255,59,47,.3);padding:3px 9px;border-radius:999px}
+.app .body{min-height:520px}
+.side button.it{display:flex;width:100%;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;border:0;background:none;color:inherit;font:inherit;cursor:pointer;text-align:left;transition:background .15s,color .15s}
+.side button.it:hover{background:rgba(255,255,255,.04);color:#fff}
+.side button.it b{width:16px;height:16px;border-radius:5px;background:#26262c;display:inline-block;flex:none}
+.side button.it.on{background:rgba(255,59,47,.1);color:#fff}.side button.it.on b{background:var(--red)}
+.main{position:relative;min-width:0}
+.dv{display:none;animation:dvin .35s ease}.dv.on{display:block}
+@keyframes dvin{from{opacity:0;transform:translateY(6px)}}
+.hint{font-size:12.5px;color:var(--dim);margin:-6px 0 12px}
+button.chip{cursor:pointer;font:inherit;font-size:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.kpis.k3{grid-template-columns:repeat(3,1fr)}
+.kpis div{background:#18181d;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpis small{display:block;font-size:11.5px;color:var(--dim)}
+.kpis b{display:block;font-family:"Space Grotesk";font-size:26px;letter-spacing:-.02em;margin:2px 0}
+.kpis span{font-size:11.5px;color:var(--muted)}.kpis span.g{color:var(--green)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pane{background:#18181d;border:1px solid var(--line);border-radius:12px;padding:14px}
+.pane h6{font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:10px}
+.mut{color:var(--dim);font-weight:400}
+.li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;background:#1d1d23;margin-bottom:6px;font-size:13px;cursor:pointer;transition:background .15s}
+.li:hover{background:#24242b}
+.st{font-style:normal;font-size:11px;padding:3px 8px;border-radius:999px;background:#26262c;color:var(--muted);white-space:nowrap}
+.st.s-ok{background:rgba(61,220,132,.12);color:var(--green)}.st.s-pr{background:rgba(255,184,77,.12);color:#ffb84d}
+.minibars{display:flex;align-items:flex-end;gap:7px;height:96px}.minibars i{flex:1;background:#2a2a31;border-radius:4px 4px 0 0}.minibars i.r{background:linear-gradient(180deg,#ff5a4f,#b8160d)}
+.days{display:flex;gap:7px;margin-top:6px}.days span{flex:1;text-align:center;font-size:11px;color:var(--dim)}
+button.v{padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer;transition:transform .15s,border-color .15s}
+button.v:hover,button.v.on{transform:translateY(-2px);border-color:rgba(255,59,47,.6)}
+.v .th img{object-position:50% 20%}
+.whybox{margin-top:12px;background:#18181d;border:1px solid rgba(255,59,47,.35);border-radius:12px;padding:14px;font-size:13.5px;color:var(--muted)}
+.whybox b{color:#fff}
+.tbl{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.tr{display:grid;grid-template-columns:2.4fr 1fr .6fr 1fr;gap:10px;align-items:center;padding:11px 14px;border:0;border-top:1px solid var(--line);background:#16161b;width:100%;color:#ddd;font:inherit;font-size:13px;text-align:left;cursor:pointer}
+.tr:hover{background:#1c1c22}
+.tr.th{border-top:0;background:#1b1b21;color:var(--dim);font-size:11.5px;cursor:default;text-transform:uppercase;letter-spacing:.06em}
+.tr .sc{font-family:"Space Grotesk";color:var(--red);font-weight:700}
+.hooks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hk{background:#18181d;border:1px solid var(--line);border-radius:12px;padding:14px;position:relative}
+.hk p{font-size:14px;color:#fff;font-weight:500;margin-bottom:8px;padding-right:48px}
+.hk span{font-size:11.5px;color:var(--dim)}
+.hk .cp{position:absolute;top:12px;right:12px;font:600 11px Inter;padding:5px 9px;border-radius:7px;border:1px solid var(--line2);background:#22222a;color:#ddd;cursor:pointer}
+.hk[hidden]{display:none}
+.srcs .chan{background:#18181d}
+.addsrc,.askf{display:flex;gap:8px;margin-top:10px}
+.addsrc input,.askf input{flex:1;min-width:0;background:#0f0f12;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font:500 13.5px Inter;padding:10px 12px;outline:none}
+.addsrc input:focus,.askf input:focus{border-color:rgba(255,59,47,.6)}
+.split{display:grid;grid-template-columns:.9fr 1.3fr;gap:10px}
+.slist{display:grid;gap:6px;align-content:start}
+.si{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:#18181d;color:#ddd;font:inherit;font-size:13px;text-align:left;cursor:pointer}
+.si.on{border-color:rgba(255,59,47,.55);background:rgba(255,59,47,.07);color:#fff}
+.sview{background:#18181d;border:1px solid var(--line);border-radius:12px;padding:14px}
+.sview .ab button{font:500 12px Inter;padding:5px 10px;border-radius:8px;background:#1d1d23;border:1px solid var(--line);color:var(--muted);cursor:pointer}
+.sview .ab button.on{color:#fff;border-color:rgba(255,59,47,.5);background:rgba(255,59,47,.12)}
+.stext p{font-size:13.5px;line-height:1.55;color:#ddd;margin-bottom:9px}
+.stext p.hk1{border-left:3px solid var(--red);padding-left:10px;color:#fff;font-weight:600}
+.stext .lbl{display:inline-block;font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin-bottom:2px}
+.stext .prod{font-size:12.5px;color:#ffb84d;background:rgba(255,184,77,.08);border:1px dashed rgba(255,184,77,.35);padding:9px 11px;border-radius:9px;margin-top:6px}
+.ptxt{font-size:13.5px;color:#ddd}
+.sl{display:grid;grid-template-columns:70px 1fr 70px;align-items:center;gap:10px;font-size:12px;color:var(--dim);margin:8px 0}
+.sl span:last-child{text-align:right}
+.sl i{height:6px;border-radius:6px;background:#2a2a31;position:relative}
+.sl i:after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--p);border-radius:6px;background:linear-gradient(90deg,#b8160d,#ff5a4f)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{font-size:12px;padding:5px 10px;border-radius:999px;background:#24242b;color:var(--muted);text-decoration:line-through}
+.tags.r span{text-decoration:none;color:#ffd2ce;background:rgba(255,59,47,.12)}
+.chart{background:#18181d;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px}
+.chart svg{width:100%;height:170px;display:block}
+.chart .ln{fill:none;stroke:var(--red);stroke-width:2.5;vector-effect:non-scaling-stroke;transition:d .5s}
+.chart .ar{fill:url(#agrad);fill:rgba(255,59,47,.14);transition:d .5s}
+.rep p{font-size:13.5px;color:#ddd;margin-bottom:10px}.rep b{color:#fff}
+.chat{display:grid;gap:8px;max-height:230px;overflow:auto;padding:4px 2px 8px}
+.msg{max-width:85%;padding:10px 12px;border-radius:12px;font-size:13.5px;line-height:1.5}
+.msg.bot{background:#1d1d23;border:1px solid var(--line);color:#ddd}
+.msg.me{justify-self:end;background:rgba(255,59,47,.14);border:1px solid rgba(255,59,47,.35);color:#fff}
+.sugg{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.sugg button{font:500 12px Inter;padding:7px 11px;border-radius:999px;border:1px solid var(--line2);background:transparent;color:#ddd;cursor:pointer}
+.sugg button:hover{border-color:rgba(255,59,47,.6)}
+.toast{position:absolute;left:50%;bottom:18px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff;color:#0a0a0a;font-size:13.5px;font-weight:600;padding:11px 16px;border-radius:12px;box-shadow:0 20px 50px -10px rgba(0,0,0,.7);transition:opacity .25s,transform .25s;width:max-content;max-width:90%}
+.toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast a{color:var(--red2)}
+@media(max-width:860px){
+ .app .body{grid-template-columns:1fr}
+ .side{display:flex;overflow-x:auto;gap:4px;border-right:0;border-bottom:1px solid var(--line);padding:10px;scrollbar-width:none}
+ .side .h{display:none}
+ .side button.it{width:auto;white-space:nowrap;flex:none}
+ .kpis{grid-template-columns:repeat(2,1fr)}.kpis.k3{grid-template-columns:repeat(3,1fr)}
+ .two,.split,.hooks{grid-template-columns:1fr}
+ .tr{grid-template-columns:1.8fr .6fr 1fr}.tr span:nth-child(2){display:none}
+ .app .bar em.dbadge{display:none}
+ .main .top{flex-wrap:wrap}
+}
+
+/* proof: six platforms */
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.px{display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 18px 22px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card2),var(--card));color:inherit;font:inherit;cursor:zoom-in;transition:border-color .2s,transform .2s,box-shadow .2s}
+.px:hover{border-color:rgba(255,59,47,.55);transform:translateY(-3px);box-shadow:0 30px 70px -30px rgba(255,59,47,.45)}
+.px .plat{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.pimg{position:relative;display:block;width:100%;aspect-ratio:3/4.4;border-radius:14px;overflow:hidden;border:1px solid var(--line2);background:#000}
+.pimg img{width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+.lens{position:absolute;width:50%;aspect-ratio:1;border-radius:50%;border:3px solid var(--red);box-shadow:0 0 0 5px rgba(255,59,47,.25),0 18px 40px rgba(0,0,0,.6),0 0 40px rgba(255,59,47,.5);background-repeat:no-repeat;transform:translate(-50%,-50%);pointer-events:none;animation:lensin .6s .2s both}
+@keyframes lensin{from{opacity:0;transform:translate(-50%,-50%) scale(.6)}}
+.play{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(255,59,47,.92);color:#fff;font-size:20px;padding-left:4px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.px b{font-family:"Space Grotesk";font-size:clamp(26px,3vw,34px);letter-spacing:-.02em;margin-top:18px;line-height:1.1}
+.px small{color:var(--muted);font-size:14.5px;margin-top:4px}
+.rawnote{text-align:center;color:var(--dim);font-size:14px;margin-top:22px}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.86);backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px}
+.lb[hidden]{display:none}
+.lbin{max-width:min(520px,92vw);max-height:88vh}
+.lbin img{max-height:88vh;width:auto;border-radius:14px}
+.lbin iframe{width:min(400px,88vw);aspect-ratio:9/16;max-height:84vh;border:0;border-radius:16px;background:#000}
+.lbx{position:absolute;top:16px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);background:#16161b;color:#fff;font-size:24px;cursor:pointer}
+@media(max-width:900px){.six{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.six{grid-template-columns:1fr 1fr;gap:10px}.px{padding:12px 10px 16px}.px b{font-size:21px}.px small{font-size:12.5px}.px .plat{font-size:10.5px;margin-bottom:10px}}
+
 /* solutions */
 .sols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .sol{border-radius:var(--r);padding:30px 26px;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);position:relative;overflow:hidden}
@@ -246,6 +363,9 @@ section{padding:110px 0;position:relative}
 .pr li{display:flex;gap:10px}
 .pr li:before{content:"✓";color:var(--red);font-weight:700}
 .pr .btn{width:100%}
+.dfy{max-width:900px;margin:26px auto 0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 26px;border-radius:18px;border:1px solid rgba(255,59,47,.35);background:rgba(255,59,47,.06)}
+.dfy b{display:block;font-size:17px;margin-bottom:4px}.dfy span{color:var(--muted);font-size:14.5px}
+@media(max-width:700px){.dfy{flex-direction:column;align-items:flex-start}}
 .founding{margin:22px auto 0;max-width:760px;text-align:center;font-size:14.5px;color:var(--muted)}
 @media(max-width:900px){.prices{grid-template-columns:1fr}}
 
@@ -296,7 +416,7 @@ footer a{color:var(--muted);text-decoration:none}
  <div class="wrap">
   <a class="brand" href="#top"><img src="logo.svg" alt="">Tidehatch</a>
   <div class="navlinks">
-   <a href="#features">Features</a><a href="#how">How it works</a><a href="#solutions">Solutions</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+   <a href="#demo">Demo</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#solutions">Solutions</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
   </div>
   <a class="btn sm" href="#join">Get early access</a>
  </div>
@@ -319,13 +439,13 @@ footer a{color:var(--muted);text-decoration:none}
     <button class="btn" type="submit">Join early access</button>
     <div class="more">
      <label class="sr" for="f-link">Your main channel link (optional)</label>
-     <input id="f-link" name="link" type="url" placeholder="Your main channel link, optional: we use it for your free ideas report">
+     <input id="f-link" name="link" type="url" placeholder="Your main channel link, optional: I use it for your free ideas report">
     </div>
    </form>
-   <p class="note">Founding bonus: the first 100 people get a free <b style="color:var(--ink)">7 Video Ideas report</b> for their niche. No spam, unsubscribe anytime.</p>
+   <p class="note">Founding bonus: the first 100 people get a free <b style="color:var(--ink)">7 Video Ideas report</b> at launch, plus founding prices. No spam, unsubscribe anytime.</p>
    <div class="ok" role="status" aria-live="polite">
     <h3>You're on the list.</h3>
-    <p>We'll email you the moment early access opens. If you're one of the first 100, your free 7 Video Ideas report comes with it.</p>
+    <p>I'll email you the moment early access opens. If you're one of the first 100, your free 7 Video Ideas report comes with it.</p>
    </div>
   </div>
 
@@ -337,36 +457,161 @@ footer a{color:var(--muted);text-decoration:none}
    <div class="cbox"><div class="n" id="secs">00</div><small>Secs</small></div>
   </div>
 
-  <!-- product mock -->
-  <div class="stage rv">
-   <div class="app" aria-hidden="true">
-    <div class="bar"><i></i><i></i><i></i><span>app.tidehatch.com / ideas</span></div>
+  <!-- interactive demo -->
+  <div class="stage rv" id="demo">
+   <div class="demohead"><span class="dot"></span>Live demo. Click around, nothing here costs credits.</div>
+   <div class="app">
+    <div class="bar"><i></i><i></i><i></i><span>app.tidehatch.com / demo workspace</span><em class="dbadge">Demo · Health niche · Sample data</em></div>
     <div class="body">
-     <div class="side">
+     <nav class="side" aria-label="Demo sections">
+      <div class="h">Overview</div>
+      <button class="it on" data-v="dash"><b></b>Dashboard</button>
       <div class="h">Research</div>
-      <div class="it on"><b></b>Outlier feed</div>
-      <div class="it"><b></b>Channels</div>
-      <div class="it"><b></b>Why it won</div>
+      <button class="it" data-v="videos"><b></b>Videos</button>
+      <button class="it" data-v="ideas"><b></b>Ideas</button>
+      <button class="it" data-v="hooks"><b></b>Hook collection</button>
+      <button class="it" data-v="sources"><b></b>Sources</button>
       <div class="h">Create</div>
-      <div class="it"><b></b>Scripts</div>
-      <div class="it"><b></b>Hatch (vault)</div>
+      <button class="it" data-v="scripts"><b></b>Scripts</button>
+      <button class="it" data-v="persona"><b></b>Persona</button>
       <div class="h">Grow</div>
-      <div class="it"><b></b>Analytics</div>
-      <div class="it"><b></b>Ask Tidehatch</div>
-     </div>
+      <button class="it" data-v="analytics"><b></b>Analytics</button>
+      <button class="it" data-v="reports"><b></b>Reports</button>
+      <button class="it" data-v="ask"><b></b>Ask Tidehatch</button>
+     </nav>
      <div class="main">
-      <div class="top"><h4>Outlier feed <span style="font:500 11px Inter;color:var(--dim);margin-left:6px">sample</span></h4>
-       <div class="chips"><span class="chip on">Outlier 10x+</span><span class="chip">Last 90 days</span><span class="chip">All platforms</span></div>
+
+      <div class="dv on" data-v="dash">
+       <div class="top"><h4>Good morning. Here's your week.</h4><button class="btn sm lock">+ New idea</button></div>
+       <div class="kpis">
+        <div><small>Ideas in the pipeline</small><b>24</b><span class="g">+6 this week</span></div>
+        <div><small>Scripts ready to film</small><b>6</b><span>2 in production</span></div>
+        <div><small>Outliers found</small><b>38</b><span class="g">last 7 days</span></div>
+        <div><small>Best outlier score</small><b>42x</b><span>"Why you can't sleep"</span></div>
+       </div>
+       <div class="two">
+        <div class="pane"><h6>Film next</h6>
+         <div class="li" data-go="scripts"><span>The real reason you can't sleep</span><em class="st s-ok">Script ready</em></div>
+         <div class="li" data-go="scripts"><span>3 myths about protein after 40</span><em class="st s-ok">Script ready</em></div>
+         <div class="li" data-go="ideas"><span>What 10,000 steps really does</span><em class="st">Idea</em></div>
+        </div>
+        <div class="pane"><h6>Views this week <span class="mut">all platforms</span></h6>
+         <div class="minibars"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:55%"></i><i style="height:48%"></i><i class="r" style="height:92%"></i><i style="height:60%"></i></div>
+         <div class="days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+        </div>
+       </div>
       </div>
-      <div class="vids">
-       <div class="v"><div class="th"><img src="media/ex-enhanced.jpg" alt=""><span class="tag hot">Outlier</span></div>
-        <div class="meta"><p>My 5 takeaways from the Enhanced Games</p><div class="row"><span>672.6K views</span><span class="g">Saved</span></div></div></div>
-       <div class="v"><div class="th cov c1"><span class="tag hot">42x</span><em>The real reason you can't sleep</em></div><div class="meta"><p>Hook: a question you can't answer yet</p><div class="row"><span>Instagram</span><span class="g">+ Save</span></div></div></div>
-       <div class="v"><div class="th cov c2"><span class="tag hot">17x</span><em>3 myths about protein</em></div><div class="meta"><p>Format: myth list, 3 beats</p><div class="row"><span>TikTok</span><span class="g">+ Save</span></div></div></div>
-       <div class="v"><div class="th cov c3"><span class="tag hot">11x</span><em>I tried this for 30 days</em></div><div class="meta"><p>Story: before and after</p><div class="row"><span>Shorts</span><span class="g">+ Save</span></div></div></div>
+
+      <div class="dv" data-v="videos">
+       <div class="top"><h4>Videos</h4>
+        <div class="chips" data-chips><button class="chip on">Outlier 10x+</button><button class="chip">Last 90 days</button><button class="chip">All platforms</button></div>
+       </div>
+       <p class="hint">Real results from one health creator's accounts. Click a video to see why it won.</p>
+       <div class="vids">
+        <button class="v" data-why="0"><div class="th"><img src="media/ap/facebook.jpg" alt="" loading="lazy"><span class="tag hot">Facebook</span></div><div class="meta"><p>Ancient warrior myth</p><div class="row"><span>1.2M views</span></div></div></button>
+        <button class="v" data-why="1"><div class="th"><img src="media/ap/x.jpg" alt="" loading="lazy" style="object-position:30% 40%"><span class="tag hot">X</span></div><div class="meta"><p>10 kettlebell moves</p><div class="row"><span>457K views</span></div></div></button>
+        <button class="v" data-why="2"><div class="th"><img src="media/ap/instagram.jpg" alt="" loading="lazy"><span class="tag hot">&gt;100x</span></div><div class="meta"><p>The ritual officials banned</p><div class="row"><span>281K views</span></div></div></button>
+        <button class="v" data-why="3"><div class="th"><img src="media/ap/shorts.jpg" alt="" loading="lazy"><span class="tag hot">&gt;100x</span></div><div class="meta"><p>60-second blood sugar habit</p><div class="row"><span>78K views</span></div></div></button>
+       </div>
+       <div class="whybox" hidden></div>
       </div>
+
+      <div class="dv" data-v="ideas">
+       <div class="top"><h4>Ideas</h4><button class="btn sm lock">Generate 10 ideas</button></div>
+       <div class="tbl">
+        <div class="tr th"><span>Idea</span><span>From outlier</span><span>Score</span><span>Status</span></div>
+        <button class="tr"><span>The real reason you can't sleep</span><span>Instagram</span><span class="sc">42x</span><span><em class="st s-ok">Scripted</em></span></button>
+        <button class="tr"><span>3 myths about protein after 40</span><span>TikTok</span><span class="sc">17x</span><span><em class="st s-ok">Scripted</em></span></button>
+        <button class="tr"><span>I tried cold showers for 30 days</span><span>Shorts</span><span class="sc">11x</span><span><em class="st s-pr">Filming</em></span></button>
+        <button class="tr"><span>What 10,000 steps really does</span><span>Instagram</span><span class="sc">9x</span><span><em class="st">Idea</em></span></button>
+        <button class="tr"><span>The breakfast that spikes your blood sugar</span><span>Facebook</span><span class="sc">8x</span><span><em class="st">Idea</em></span></button>
+       </div>
+       <p class="hint">Click a status to move an idea along.</p>
+      </div>
+
+      <div class="dv" data-v="hooks">
+       <div class="top"><h4>Hook collection</h4>
+        <div class="chips" data-filter><button class="chip on" data-f="all">All</button><button class="chip" data-f="q">Question</button><button class="chip" data-f="m">Myth</button><button class="chip" data-f="n">Number</button><button class="chip" data-f="s">Story</button></div>
+       </div>
+       <div class="hooks">
+        <div class="hk" data-k="q"><p>"You're doing this every night, and it's why you wake up tired."</p><span>Question · avg 18x</span><button class="cp">Copy</button></div>
+        <div class="hk" data-k="m"><p>"Everyone told you [habit] is healthy. Here's what the study found."</p><span>Myth · avg 14x</span><button class="cp">Copy</button></div>
+        <div class="hk" data-k="n"><p>"3 foods I'd never eat after 40, and what I eat instead."</p><span>Number · avg 12x</span><button class="cp">Copy</button></div>
+        <div class="hk" data-k="s"><p>"I tried [habit] for 30 days. Day 12 changed everything."</p><span>Story · avg 11x</span><button class="cp">Copy</button></div>
+        <div class="hk" data-k="q"><p>"Why does nobody talk about [surprising cause]?"</p><span>Question · avg 9x</span><button class="cp">Copy</button></div>
+        <div class="hk" data-k="m"><p>"Stop doing [common habit]. Do this instead."</p><span>Myth · avg 8x</span><button class="cp">Copy</button></div>
+       </div>
+      </div>
+
+      <div class="dv" data-v="sources">
+       <div class="top"><h4>Sources</h4></div>
+       <p class="hint">The channels Tidehatch watches for you every day.</p>
+       <div class="srcs">
+        <div class="chan"><span class="av"></span><div>Your channel<small>Instagram · TikTok · YouTube</small></div><span class="add ok">Connected</span></div>
+        <div class="chan"><span class="av b"></span><div>Sleep scientist<small>Instagram · 1.1M followers</small></div><span class="add ok">Tracking</span></div>
+        <div class="chan"><span class="av b"></span><div>Longevity doctor<small>YouTube · 2.4M subscribers</small></div><span class="add ok">Tracking</span></div>
+       </div>
+       <form class="addsrc"><input placeholder="Paste a channel link or @handle" aria-label="Channel to track"><button class="btn sm" type="submit">Track</button></form>
+      </div>
+
+      <div class="dv" data-v="scripts">
+       <div class="top"><h4>Scripts</h4><button class="btn sm lock">Write a script</button></div>
+       <div class="split">
+        <div class="slist">
+         <button class="si on" data-s="0"><span>The real reason you can't sleep</span><em class="st s-ok">Finished</em></button>
+         <button class="si" data-s="1"><span>3 myths about protein after 40</span><em class="st s-ok">Finished</em></button>
+         <button class="si" data-s="2"><span>I tried cold showers for 30 days</span><em class="st s-pr">In production</em></button>
+         <button class="si" data-s="3"><span>What 10,000 steps really does</span><em class="st s-pr">In production</em></button>
+        </div>
+        <div class="sview">
+         <div class="ab"><button class="on" data-ab="a">Version A</button><button data-ab="b">Version B</button></div>
+         <div class="stext"></div>
+        </div>
+       </div>
+      </div>
+
+      <div class="dv" data-v="persona">
+       <div class="top"><h4>Persona</h4></div>
+       <div class="two">
+        <div class="pane"><h6>Who you talk to</h6><p class="ptxt">Busy people over 35 who want more energy and better sleep, without a strict diet or 2 hours in the gym.</p>
+         <h6 style="margin-top:14px">Your voice</h6>
+         <div class="sl"><span>Calm</span><i style="--p:72%"></i><span>Bold</span></div>
+         <div class="sl"><span>Simple</span><i style="--p:30%"></i><span>Technical</span></div>
+         <div class="sl"><span>Serious</span><i style="--p:45%"></i><span>Playful</span></div>
+        </div>
+        <div class="pane"><h6>Words you never use</h6><div class="tags"><span>biohack</span><span>detox</span><span>miracle</span><span>guru</span></div>
+         <h6 style="margin-top:14px">Topics that win for you</h6><div class="tags r"><span>sleep</span><span>blood sugar</span><span>strength after 40</span><span>myths</span></div></div>
+       </div>
+      </div>
+
+      <div class="dv" data-v="analytics">
+       <div class="top"><h4>Analytics</h4>
+        <div class="chips" data-plat><button class="chip on" data-p="0">Instagram</button><button class="chip" data-p="1">TikTok</button><button class="chip" data-p="2">YouTube</button><button class="chip" data-p="3">LinkedIn</button></div>
+       </div>
+       <div class="kpis k3"><div><small>Views, 12 weeks</small><b data-k="v">0</b></div><div><small>New followers</small><b data-k="f">0</b></div><div><small>Best video</small><b data-k="b">0</b></div></div>
+       <div class="chart"><svg viewBox="0 0 600 180" preserveAspectRatio="none"><path class="ar" d=""/><path class="ln" d=""/></svg></div>
+       <p class="hint">Sample numbers for the demo. Your real numbers show up when you connect your accounts.</p>
+      </div>
+
+      <div class="dv" data-v="reports">
+       <div class="top"><h4>Reports</h4><button class="btn sm lock">Run a report</button></div>
+       <div class="pane rep"><h6>Weekly report · Sample</h6>
+        <p><b>What worked:</b> question hooks about sleep beat your normal views by 3x. Keep the first line under 8 words.</p>
+        <p><b>What didn't:</b> long intros. Every video that waited past 3 seconds to say the point lost half its viewers.</p>
+        <p><b>Next week:</b> film the 2 ready scripts, and test version B of the protein script on TikTok first.</p>
+       </div>
+      </div>
+
+      <div class="dv" data-v="ask">
+       <div class="top"><h4>Ask Tidehatch</h4><span class="mut" style="font-size:12px">remembers your channel</span></div>
+       <div class="chat"><div class="msg bot">Hi! I know your channel, your ideas and your numbers. Pick a question to try me.</div></div>
+       <div class="sugg"><button>What should I post next week?</button><button>Why did my sleep video work?</button><button>Which hook should I test next?</button></div>
+       <form class="askf"><input placeholder="Ask anything about your content" aria-label="Ask Tidehatch"><button class="btn sm" type="submit">Send</button></form>
+      </div>
+
      </div>
     </div>
+    <div class="toast" role="status" aria-live="polite"></div>
    </div>
   </div>
  </div>
@@ -375,12 +620,12 @@ footer a{color:var(--muted);text-decoration:none}
 <!-- PROOF STRIP -->
 <div class="strip">
  <div class="wrap rv">
-  Built and tested inside MJ Creative, a short-form content agency, on real client channels.
+  I built Tidehatch for my own short-form work. Here's what it did for one creator.
   <div class="stats">
-   <div><b>1M+</b><span>YouTube views, two client channels, 90 days</span></div>
-   <div><b>672K</b><span>views on one Instagram reel</span></div>
-   <div><b>111K</b><span>LinkedIn impressions in 7 days</span></div>
-   <div><b>2.5 yrs</b><span>of short-form data behind the system</span></div>
+   <div><b>6</b><span>platforms where his videos went viral</span></div>
+   <div><b>1.2M</b><span>views on one Facebook reel</span></div>
+   <div><b>457K</b><span>views on one X post</span></div>
+   <div><b>100x+</b><span>his usual views on Instagram and Shorts</span></div>
   </div>
  </div>
 </div>
@@ -464,44 +709,22 @@ footer a{color:var(--muted);text-decoration:none}
 <section id="proof">
  <div class="wrap">
   <div class="sh rv">
-   <span class="eyebrow">Proof</span>
-   <h2>The system behind it already gets <span class="red">real views</span></h2>
-   <p>Tidehatch started as the in-house research and script system at MJ Creative. These results come from client channels it supports today.</p>
+   <span class="eyebrow">Real views</span>
+   <h2>One health creator. <span class="red">Viral on 6 platforms.</span></h2>
+   <p>Andrew is a longevity and health coach. I find his ideas and write his scripts with the same system that runs inside Tidehatch. These are raw screenshots from his own accounts. Tap one to look closer.</p>
   </div>
-  <div class="proof">
-   <div class="pc rv">
-    <div class="plat">YouTube</div>
-    <div class="shot"><img src="media/proof-yt.png" alt="YouTube Studio analytics for a client channel" loading="lazy"></div>
-    <div class="n">182,146 views</div>
-    <p>And 1,118 new subscribers in 90 days. The channel went from 290 to 6,770 subscribers. Andrew, longevity and health coach.</p>
-    <div class="vidwrap">
-     <div>
-      <div class="vframe"><video src="media/ex-enhanced.mp4" poster="media/ex-enhanced.jpg" controls preload="none" playsinline></video></div>
-      <div class="vcap"><span>Instagram reel</span><b>672,561 views</b></div>
-     </div>
-     <div>
-      <div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/r83ZVE9ieKY" title="Client YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="vcap"><span>YouTube Short</span><b>78,887 views</b></div>
-     </div>
-    </div>
-   </div>
-   <div class="pstack">
-    <div class="pc rv">
-     <div class="plat">Instagram</div>
-     <div class="shot"><img src="media/proof-ig.png" alt="Instagram insights for a client account" loading="lazy"></div>
-     <div class="n">313,500 views</div>
-     <p>And 1,100 new followers in 30 days. His best reel reached 672,561 views.</p>
-    </div>
-    <div class="pc rv">
-     <div class="plat">LinkedIn</div>
-     <div class="shot"><img src="media/proof-li.png" alt="LinkedIn analytics: 111,322 post impressions in 7 days" loading="lazy"></div>
-     <div class="n">111,322 impressions</div>
-     <p>In a single week on a client's LinkedIn.</p>
-    </div>
-   </div>
+  <div class="six">
+   <button class="px rv" data-img="media/ap/facebook.jpg" data-lx="24" data-ly="92" data-z="1.55"><span class="plat">Facebook</span><span class="pimg"><img src="media/ap/facebook.jpg" alt="Facebook reel showing 1.2M views" loading="lazy"><i class="lens"></i></span><b>1.2M views</b><small>One reel</small></button>
+   <button class="px rv" data-img="media/ap/x.jpg" data-lx="76" data-ly="95.5" data-z="3.2"><span class="plat">X</span><span class="pimg"><img src="media/ap/x.jpg" alt="X post showing 457K views" loading="lazy"><i class="lens"></i></span><b>457K views</b><small>One post</small></button>
+   <button class="px rv" data-img="media/ap/instagram.jpg" data-lx="31" data-ly="93" data-z="1.45"><span class="plat">Instagram</span><span class="pimg"><img src="media/ap/instagram.jpg" alt="Instagram reel showing 281K views, over 100x his usual" loading="lazy"><i class="lens"></i></span><b>281K views</b><small>Over 100x his usual</small></button>
+   <button class="px rv" data-yt="r83ZVE9ieKY" data-img="media/ap/shorts.jpg" data-lx="15" data-ly="91" data-z="1.35"><span class="plat">YouTube Shorts</span><span class="pimg"><img src="media/ap/shorts.jpg" alt="YouTube Short showing 78K views, over 100x his usual" loading="lazy"><i class="lens"></i><span class="play">▶</span></span><b>78K views</b><small>Over 100x his usual · tap to play</small></button>
+   <button class="px rv" data-img="media/ap/tiktok.jpg" data-lx="22" data-ly="85" data-z="1.6"><span class="plat">TikTok</span><span class="pimg"><img src="media/ap/tiktok.jpg" alt="TikTok video showing 24.3K views" loading="lazy"><i class="lens"></i></span><b>24.3K views</b><small>One short</small></button>
+   <button class="px rv" data-img="media/ap/linkedin.jpg" data-lx="22" data-ly="96.5" data-z="2.4"><span class="plat">LinkedIn</span><span class="pimg"><img src="media/ap/linkedin.jpg" alt="LinkedIn video post with 161 reactions and 34 reposts" loading="lazy"><i class="lens"></i></span><b>56,451 impressions</b><small>161 reactions, 34 reposts</small></button>
   </div>
+  <p class="rawnote">Raw screenshots from Andrew's own accounts. Nothing redrawn, only zoomed.</p>
  </div>
 </section>
+<div class="lb" hidden><button class="lbx" aria-label="Close">×</button><div class="lbin"></div></div>
 
 <!-- SOLUTIONS -->
 <section id="solutions">
@@ -515,8 +738,8 @@ footer a{color:var(--muted);text-decoration:none}
     <ul><li>Ideas backed by real view data</li><li>Scripts in your voice in minutes</li><li>One hour of filming, a month of posts</li></ul></div>
    <div class="sol rv"><span class="who">Creators</span><h3>Stop guessing what hits</h3><p>Track the channels you compete with and catch the next outlier before everyone copies it.</p>
     <ul><li>Daily outlier feed for your niche</li><li>Why-it-won breakdowns</li><li>A and B scripts to test hooks</li></ul></div>
-   <div class="sol rv"><span class="who">Agencies and teams</span><h3>One system, every client</h3><p>Run research, scripts and reporting for many clients from one place, the way our own agency does.</p>
-    <ul><li>A private space per client</li><li>Weekly analytics per platform</li><li>Every idea and script in one vault</li></ul></div>
+   <div class="sol rv"><span class="who">Teams</span><h3>One system, every brand</h3><p>Run research, scripts and reports for every brand you post for, from one place. It's how I run mine.</p>
+    <ul><li>A private space per brand</li><li>Weekly analytics per platform</li><li>Every idea and script in one vault</li></ul></div>
   </div>
  </div>
 </section>
@@ -538,12 +761,13 @@ footer a{color:var(--muted);text-decoration:none}
     <div class="price">TBA</div><div class="sub">Announced at launch</div>
     <ul><li>Everything in Starter</li><li>Analytics on every platform</li><li>Ask Tidehatch chat with memory</li><li>A and B scripts for testing</li><li>Long-form ideas and titles</li></ul>
     <a class="btn" href="#join">Join the waitlist</a></div>
-   <div class="pr rv"><h3>Team</h3><p class="for">For agencies and teams running content for several brands.</p>
+   <div class="pr rv"><h3>Team</h3><p class="for">For teams running content for several brands.</p>
     <div class="price">TBA</div><div class="sub">Announced at launch</div>
-    <ul><li>Everything in Pro</li><li>A private space per client</li><li>Weekly client reports</li><li>Done-for-you editing option</li></ul>
+    <ul><li>Everything in Pro</li><li>A private space per brand</li><li>Weekly reports per brand</li><li>Done-for-you editing by me</li></ul>
     <a class="btn ghost" href="#join">Join the waitlist</a></div>
   </div>
-  <p class="founding">Join before launch and you get founding pricing, held for as long as you stay subscribed.</p>
+  <p class="founding">Join before launch and you get founding prices, held for as long as you stay subscribed.</p>
+  <div class="dfy rv"><div><b>Want the videos edited too?</b><span>On the Team plan I edit your videos for you, with the same hooks, captions and pacing that took Andrew viral on 6 platforms.</span></div><a class="btn ghost" href="#join">Get on the list</a></div>
  </div>
 </section>
 
@@ -554,12 +778,12 @@ footer a{color:var(--muted);text-decoration:none}
    <div>
     <span class="eyebrow">Founding member bonus</span>
     <h2>Join now, get your first ideas free</h2>
-    <p>Tidehatch is in private beta with our agency clients. The first 100 people on the list get a free report before launch, made with the same system.</p>
+    <p>Tidehatch is in private beta with the people I work with. Join the list and here's what you get at launch.</p>
     <a class="btn" href="#join" style="margin-top:26px">Claim my spot</a>
    </div>
    <ol>
-    <li><div>Free 7 Video Ideas report<span>Seven ideas for your niche, each backed by a real outlier video.</span></div></li>
-    <li><div>Founding pricing<span>Your launch price stays as long as you stay.</span></div></li>
+    <li><div>Free 7 Video Ideas report<span>For the first 100 people. 7 ideas for your niche, each backed by a real outlier video.</span></div></li>
+    <li><div>Founding prices<span>Your launch price stays as long as you stay.</span></div></li>
     <li><div>First in<span>Early access opens to the list first, in the order people joined.</span></div></li>
    </ol>
   </div>
@@ -579,20 +803,20 @@ footer a{color:var(--muted);text-decoration:none}
     <details><summary>Which platforms does it cover?</summary><p>Instagram Reels, TikTok, YouTube Shorts and LinkedIn for research and analytics, plus YouTube long-form ideas and titles.</p></details>
     <details><summary>Do I have to connect my social accounts?</summary><p>No. Research and scripts work without it. Connecting your accounts adds your own analytics, so ideas and advice are built on your numbers.</p></details>
     <details><summary>Will the scripts sound like me?</summary><p>Yes. Tidehatch learns your voice from your own videos and posts, and every script comes in two versions so you can test which one your audience likes.</p></details>
-    <details><summary>Who is behind Tidehatch?</summary><p>MJ Creative, a short-form content agency. Tidehatch is the research and script system we built for our own clients, now opening up to everyone.</p></details>
+    <details><summary>Who is behind Tidehatch?</summary><p>I'm Marko. I built Tidehatch to find ideas and write scripts for the people I make short-form videos with. Now I'm opening it up.</p></details>
    </div>
    <div class="faqgroup">
-    <details><summary>When does Tidehatch launch?</summary><p>The public launch date is to be announced. It's in private beta with our agency clients now, and the early access list gets in first.</p></details>
-    <details><summary>What do I get for joining early?</summary><p>The first 100 people get a free 7 Video Ideas report for their niche. Everyone on the list gets founding pricing and first access.</p></details>
-    <details><summary>Does joining the list cost anything?</summary><p>No. Joining is free and doesn't commit you to buy. We'll email you when early access opens.</p></details>
+    <details><summary>When does Tidehatch launch?</summary><p>The public launch date is to be announced. It's in private beta with the people I work with now, and the early access list gets in first.</p></details>
+    <details><summary>What do I get for joining early?</summary><p>The first 100 people get a free 7 Video Ideas report for their niche at launch. Everyone on the list gets founding prices and first access.</p></details>
+    <details><summary>Does joining the list cost anything?</summary><p>No. Joining is free and doesn't commit you to buy. I'll email you when early access opens.</p></details>
     <details><summary>How much will it cost?</summary><p>Prices come out at launch, and the list sees them first. There will be three plans: Starter, Pro and Team.</p></details>
-    <details><summary>What do you do with my email?</summary><p>We only use it to send Tidehatch launch news and your bonus. We never sell it, and you can unsubscribe anytime.</p></details>
+    <details><summary>What do you do with my email?</summary><p>I only use it to send Tidehatch launch news and your bonus. I never sell it, and you can unsubscribe anytime.</p></details>
    </div>
    <div class="faqgroup">
     <details><summary>What is the Hatch?</summary><p>Your private vault. Every idea you save, every script you write and every finished video lives there, so nothing gets lost in notes apps and chats.</p></details>
-    <details><summary>Can I organize ideas into collections?</summary><p>Yes. Group ideas by topic, series, platform or client, and move them from idea to script to filmed to posted.</p></details>
+    <details><summary>Can I organize ideas into collections?</summary><p>Yes. Group ideas by topic, series, platform or brand, and move them from idea to script to filmed to posted.</p></details>
     <details><summary>Can I save a video from someone else's channel?</summary><p>Yes. Paste a link from Instagram, TikTok or YouTube and Tidehatch saves it to your collection with its views and a why-it-won breakdown.</p></details>
-    <details><summary>Who can see my collections?</summary><p>Only you, and anyone you invite. On the Team plan, each client gets their own private space.</p></details>
+    <details><summary>Who can see my collections?</summary><p>Only you, and anyone you invite. On the Team plan, each brand gets its own private space.</p></details>
    </div>
   </div>
  </div>
@@ -665,6 +889,120 @@ const WAITLIST = {
     clearTimeout(timer); timer=setTimeout(()=>go((cur+1)%steps.length),6000); }
   steps.forEach((s,i)=>s.addEventListener('click',()=>go(i)));
   go(0);
+})();
+
+/* interactive demo: sample health workspace, no credits, no network */
+(function(){
+  const root=document.getElementById('demo'); if(!root) return;
+  const $=(s,el=root)=>el.querySelector(s), $$=(s,el=root)=>[...el.querySelectorAll(s)];
+  const toastEl=$('.toast'); let tt;
+  function toast(html){ toastEl.innerHTML=html; toastEl.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>toastEl.classList.remove('on'),3200); }
+  const LOCK='Demo mode: this would use credits. <a href="#join">Join early access</a> to run it for real.';
+
+  // nav
+  function show(v){ $$('.side .it').forEach(b=>b.classList.toggle('on',b.dataset.v===v)); $$('.dv').forEach(s=>s.classList.toggle('on',s.dataset.v===v)); if(v==='analytics') plat(curP); }
+  $$('.side .it').forEach(b=>b.addEventListener('click',()=>show(b.dataset.v)));
+  $$('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go)));
+  $$('.lock').forEach(b=>b.addEventListener('click',()=>toast(LOCK)));
+
+  // chips (visual toggle)
+  $$('[data-chips]').forEach(g=>g.addEventListener('click',e=>{const c=e.target.closest('.chip'); if(c) c.classList.toggle('on')}));
+
+  // videos: why it won
+  const WHY=[
+    '<b>Why it won:</b> it opens on an ancient story and pays it off with a health fact people can use today. Illustrated b-roll on top, the speaker below, so the eye never rests.',
+    '<b>Why it won:</b> the first line names the viewer\'s excuse, "I don\'t have time to go to the gym". Then a numbered list, one move per clip, made to be saved.',
+    '<b>Why it won:</b> a forbidden-knowledge hook, "officials banned". It opens a question in second 1 and only answers it at the end.',
+    '<b>Why it won:</b> a number and a promise in the title, 60 seconds. It\'s a demo you can copy while you watch, so people watch to the end.'];
+  const wb=$('.whybox');
+  $$('button.v').forEach(b=>b.addEventListener('click',()=>{ $$('button.v').forEach(x=>x.classList.toggle('on',x===b)); wb.hidden=false; wb.innerHTML=WHY[b.dataset.why]+' <span style="color:var(--dim)">· <a href="#" data-to-scripts style="color:#ffd2ce">Turn this into a script</a></span>'; }));
+  wb.addEventListener('click',e=>{ if(e.target.matches('[data-to-scripts]')){e.preventDefault(); toast(LOCK);} });
+
+  // ideas: cycle status
+  const ST=[['Idea',''],['Scripted','s-ok'],['Filming','s-pr'],['Posted','s-ok']];
+  $$('.tr:not(.th)').forEach(r=>r.addEventListener('click',()=>{ const em=$('.st',r); const i=ST.findIndex(s=>s[0]===em.textContent); const n=ST[(i+1)%ST.length]; em.textContent=n[0]; em.className='st '+n[1]; }));
+
+  // hooks: filter + copy
+  $$('[data-filter] .chip').forEach(c=>c.addEventListener('click',()=>{ $$('[data-filter] .chip').forEach(x=>x.classList.toggle('on',x===c)); $$('.hk').forEach(h=>h.hidden=!(c.dataset.f==='all'||h.dataset.k===c.dataset.f)); }));
+  $$('.hk .cp').forEach(b=>b.addEventListener('click',async()=>{ const t=$('p',b.parentElement).textContent; try{await navigator.clipboard.writeText(t)}catch(e){} b.textContent='Copied'; setTimeout(()=>b.textContent='Copy',1400); }));
+
+  // sources: add locally
+  $('.addsrc').addEventListener('submit',e=>{ e.preventDefault(); const i=$('input',e.target), v=i.value.trim(); if(!v) return;
+    const d=document.createElement('div'); d.className='chan'; d.innerHTML='<span class="av b"></span><div></div><span class="add ok">Tracking</span>';
+    d.children[1].textContent=v.replace(/^https?:\/\/(www\.)?/,'').slice(0,40); const s=document.createElement('small'); s.textContent='Added just now · demo'; d.children[1].appendChild(s);
+    $('.srcs').appendChild(d); i.value=''; toast('Added. In the real app Tidehatch starts watching it today.'); });
+
+  // scripts
+  const SC=[
+   {a:[['Hook',"You're doing this every night, and it's why you wake up tired."],['Body',"It's not your mattress. It's the light from your phone in the last hour before bed. It tells your brain it's still daytime."],['Payoff',"Tonight, put the phone in another room 60 minutes before sleep. Try it for 7 days and watch what happens."]],
+    b:[['Hook',"Why do you wake up tired after 8 hours of sleep?"],['Body',"Because the hour before bed matters more than the 8 hours in it. Bright screens push your sleep signal back by up to an hour."],['Payoff',"Screens off 60 minutes before bed. That's the whole fix."]]},
+   {a:[['Hook',"3 protein myths that are holding you back after 40."],['Body',"Myth 1: you can only absorb 30 grams at once. Myth 2: more protein hurts your kidneys. Myth 3: you need shakes to hit your number."],['Payoff',"Save this, and send it to the friend who's still scared of eggs."]],
+    b:[['Hook',"Everyone told you too much protein is dangerous. Here's what the research says."],['Body',"For healthy people, higher protein didn't harm the kidneys. What it did was protect muscle as you age."],['Payoff',"Aim for protein at every meal, not one big shake."]]},
+   {prod:'In production: filmed on day 30, edit due Thursday.'},
+   {prod:'In production: waiting for your voice memo on the opening line.'}];
+  let curS=0, curAB='a';
+  function renderS(){ const s=SC[curS], el=$('.stext'), ab=$('.sview .ab');
+    if(s.prod){ ab.style.display='none'; el.innerHTML='<p class="hk1">'+$$('.si')[curS].querySelector('span').textContent+'</p><p style="color:var(--muted)">Script approved. Version A was picked for filming.</p><div class="prod">'+s.prod+'</div>'; return; }
+    ab.style.display='flex'; el.innerHTML=s[curAB].map((p,i)=>'<span class="lbl">'+p[0]+'</span><p class="'+(i===0?'hk1':'')+'">'+p[1]+'</p>').join(''); }
+  $$('.si').forEach(b=>b.addEventListener('click',()=>{ curS=+b.dataset.s; $$('.si').forEach(x=>x.classList.toggle('on',x===b)); renderS(); }));
+  $$('.sview .ab button').forEach(b=>b.addEventListener('click',()=>{ curAB=b.dataset.ab; $$('.sview .ab button').forEach(x=>x.classList.toggle('on',x===b)); renderS(); }));
+  renderS();
+
+  // analytics (sample)
+  const P=[{d:[12,15,14,19,22,18,26,31,29,44,52,61],v:'343K',f:'+2,140',b:'96K'},
+           {d:[5,6,9,8,7,12,10,14,22,19,24,27],v:'163K',f:'+1,310',b:'41K'},
+           {d:[3,4,4,6,5,8,9,8,11,13,12,17],v:'100K',f:'+640',b:'28K'},
+           {d:[2,2,3,3,4,3,5,6,5,7,8,9],v:'57K',f:'+380',b:'12K'}];
+  let curP=0;
+  function plat(i){ curP=i; const d=P[i].d, max=Math.max(...d)*1.1, pts=d.map((y,x)=>[x*(600/11), 175-(y/max)*165]);
+    const line='M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L');
+    $('.chart .ln').setAttribute('d',line); $('.chart .ar').setAttribute('d',line+' L600 180 L0 180 Z');
+    $('[data-k="v"]').textContent=P[i].v; $('[data-k="f"]').textContent=P[i].f; $('[data-k="b"]').textContent=P[i].b;
+    $$('[data-plat] .chip').forEach((c,j)=>c.classList.toggle('on',j===i)); }
+  $$('[data-plat] .chip').forEach((c,i)=>c.addEventListener('click',()=>plat(i)));
+  plat(0);
+
+  // ask
+  const A={
+   'What should I post next week?':"Film the 2 ready scripts first: sleep (42x outlier) and protein myths (17x). Then test a question hook on blood sugar, your best topic this month.",
+   'Why did my sleep video work?':"The first line named a habit almost everyone has, and the answer came only at the end. Viewers who stayed past 3 seconds watched 71% of it, your best this month.",
+   'Which hook should I test next?':"A number hook: '3 foods I'd never eat after 40'. Number hooks average 12x in your niche, and you haven't used one in 3 weeks."};
+  const chat=$('.chat');
+  function say(t,who){ const m=document.createElement('div'); m.className='msg '+who; m.textContent=t; chat.appendChild(m); chat.scrollTop=chat.scrollHeight; return m; }
+  function answer(q){ say(q,'me'); const m=say('...','bot'); const t=A[q]||"In the demo I can only answer the 3 sample questions. Join early access and I'll answer this one with your real numbers.";
+    let i=0; const iv=setInterval(()=>{ m.textContent=t.slice(0,i+=3); chat.scrollTop=chat.scrollHeight; if(i>=t.length){clearInterval(iv); m.textContent=t;} },18); }
+  $$('.sugg button').forEach(b=>b.addEventListener('click',()=>answer(b.textContent)));
+  $('.askf').addEventListener('submit',e=>{ e.preventDefault(); const i=$('input',e.target); if(i.value.trim()){answer(i.value.trim()); i.value='';} });
+})();
+
+/* proof: zoom lens on the real number + lightbox */
+(function(){
+  const cards=[...document.querySelectorAll('.px')]; if(!cards.length) return;
+  function place(c){
+    const img=c.querySelector('img'), lens=c.querySelector('.lens'), box=c.querySelector('.pimg');
+    if(!img.naturalWidth) return;
+    const bw=box.clientWidth, bh=box.clientHeight, s=Math.max(bw/img.naturalWidth,bh/img.naturalHeight);
+    const rw=img.naturalWidth*s, rh=img.naturalHeight*s, ox=(bw-rw)/2, oy=(bh-rh); // object-position 50% 100%
+    let px=ox+rw*c.dataset.lx/100, py=oy+rh*c.dataset.ly/100;
+    const z=+(c.dataset.z||2.4), L=lens.offsetWidth;
+    // keep lens inside the frame
+    const cx=Math.min(Math.max(px,L/2+6),bw-L/2-6), cy=Math.min(Math.max(py-L*0.15,L/2+6),bh-L/2-6);
+    lens.style.left=cx+'px'; lens.style.top=cy+'px';
+    lens.style.backgroundImage='url("'+img.currentSrc+'")';
+    lens.style.backgroundSize=(rw*z)+'px '+(rh*z)+'px';
+    lens.style.backgroundPosition=(L/2-(px-ox)*z)+'px '+(L/2-(py-oy)*z)+'px';
+  }
+  cards.forEach(c=>{ const img=c.querySelector('img'); img.complete?place(c):img.addEventListener('load',()=>place(c)); });
+  addEventListener('resize',()=>cards.forEach(place));
+  const lb=document.querySelector('.lb'), lbin=lb.querySelector('.lbin');
+  function close(){ lb.hidden=true; lbin.innerHTML=''; }
+  cards.forEach(c=>c.addEventListener('click',()=>{
+    lbin.innerHTML=c.dataset.yt
+      ? '<iframe src="https://www.youtube-nocookie.com/embed/'+c.dataset.yt+'?autoplay=1&rel=0" title="YouTube Short" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>'
+      : '<img src="'+c.dataset.img+'" alt="'+c.querySelector('img').alt+'">';
+    lb.hidden=false; }));
+  lb.addEventListener('click',e=>{ if(e.target===lb||e.target.classList.contains('lbx')) close(); });
+  addEventListener('keydown',e=>{ if(e.key==='Escape'&&!lb.hidden) close(); });
 })();
 
 /* faq tabs */
