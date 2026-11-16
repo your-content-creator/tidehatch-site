@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidehatch | Find the short-form ideas that win, before you film</title>
+<meta name="description" content="Tidehatch is the AI content studio that finds outlier videos in your niche, explains why they won, and turns them into scripts in your voice. Join the early access list.">
+<meta name="theme-color" content="#070708">
+<link rel="canonical" href="https://tidehatch.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tidehatch.com/">
+<meta property="og:title" content="Tidehatch | Early access">
+<meta property="og:description" content="Find the short-form ideas that win, before you film. Join the early access list.">
+<meta property="og:image" content="https://tidehatch.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tidehatch","url":"https://tidehatch.com/","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"AI content studio for short-form video: outlier research, why-it-won analysis, scripts and analytics.","publisher":{"@type":"Organization","name":"MJ Creative LLC","url":"https://mjcreativellc.com/"}}
+</script>
+<style>
+:root{
+  --bg:#070708;--bg2:#0d0d10;--card:#121216;--card2:#17171c;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --ink:#f5f5f4;--muted:#a1a1a6;--dim:#6b6b72;
+  --red:#ff3b2f;--red2:#e2372b;--red3:#b8160d;--redglow:rgba(255,59,47,.35);
+  --green:#3ddc84;--r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.display{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.03em;line-height:1.05;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.red{color:var(--red)}
+.grad{background:linear-gradient(92deg,#ff6a5f 0%,#ff3b2f 45%,#ff8a5c 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* background atmosphere */
+.bgfx{position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+   radial-gradient(900px 500px at 50% -120px,rgba(255,59,47,.28),transparent 70%),
+   radial-gradient(600px 400px at 100% 30%,rgba(184,22,13,.12),transparent 70%),
+   radial-gradient(600px 400px at 0% 70%,rgba(184,22,13,.10),transparent 70%),var(--bg)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);opacity:.6}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,7,8,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Space Grotesk";font-weight:700;font-size:21px;letter-spacing:-.02em}
+.brand img{width:32px;height:32px}
+.navlinks{display:flex;gap:28px;font-size:14.5px;color:var(--muted)}
+.navlinks a{text-decoration:none;transition:color .15s}.navlinks a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:600 15px/1 Inter,sans-serif;text-decoration:none;color:#fff;padding:14px 22px;border-radius:999px;
+  background:linear-gradient(180deg,#ff4a3d,#d9241a);box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 10px 30px -8px var(--redglow),0 0 40px -10px var(--redglow);transition:transform .15s,box-shadow .2s,filter .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.08);box-shadow:0 0 0 1px rgba(255,255,255,.18) inset,0 14px 40px -8px var(--redglow),0 0 60px -10px var(--redglow)}
+.btn.sm{padding:10px 16px;font-size:14px}
+.btn.ghost{background:rgba(255,255,255,.04);box-shadow:0 0 0 1px var(--line2) inset}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+@media(max-width:860px){.navlinks{display:none}}
+
+/* hero */
+.hero{padding:84px 0 40px;text-align:center;position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border-radius:999px;background:rgba(255,59,47,.08);border:1px solid rgba(255,59,47,.3);font-size:13.5px;font-weight:500;color:#ffd2ce;margin-bottom:28px}
+.pill b{background:var(--red);color:#fff;font-size:11px;letter-spacing:.06em;padding:4px 8px;border-radius:999px;font-weight:700}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{font-size:clamp(42px,7.4vw,88px);font-weight:700;max-width:980px;margin:0 auto 22px}
+.hero .lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:640px;margin:0 auto 34px}
+
+/* waitlist form */
+.wl{max-width:620px;margin:0 auto}
+.wl form{display:grid;grid-template-columns:1fr 1.3fr auto;gap:8px;padding:8px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line2);box-shadow:0 30px 80px -30px rgba(255,59,47,.35)}
+.wl input{width:100%;background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:12px;color:var(--ink);font:500 15px Inter,sans-serif;padding:14px 14px;outline:none;transition:border-color .15s}
+.wl input:focus{border-color:rgba(255,59,47,.6)}
+.wl input::placeholder{color:var(--dim)}
+.wl .more{grid-column:1/-1;display:none}
+.wl form.open .more{display:block}
+.wl .note{font-size:13px;color:var(--dim);margin-top:14px}
+.wl .note a{color:var(--muted)}
+.wl .ok{display:none;padding:22px;border-radius:18px;background:rgba(61,220,132,.06);border:1px solid rgba(61,220,132,.35);text-align:left}
+.wl .ok h3{font-size:20px;margin-bottom:6px}
+.wl .ok p{color:var(--muted);font-size:15px}
+.wl.done form,.wl.done .note{display:none}.wl.done .ok{display:block}
+@media(max-width:640px){.wl form{grid-template-columns:1fr}.wl .btn{width:100%}}
+
+/* countdown */
+.count{display:flex;justify-content:center;align-items:center;gap:10px;margin:40px auto 0;flex-wrap:wrap}
+.count .lbl{width:100%;font-size:12.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--dim);margin-bottom:6px}
+.cbox{width:84px;padding:14px 0 10px;border-radius:14px;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);text-align:center}
+.cbox .n{font-family:"Space Grotesk";font-size:34px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+.cbox .n.scr{color:var(--red)}
+.cbox small{display:block;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+.colon{font-family:"Space Grotesk";font-size:28px;color:var(--dim)}
+@media(max-width:480px){.cbox{width:66px}.cbox .n{font-size:26px}.colon{display:none}}
+
+/* app mock */
+.stage{margin:70px auto 0;max-width:1120px;position:relative}
+.stage:before{content:"";position:absolute;inset:-40px 8% auto;height:300px;background:radial-gradient(closest-side,rgba(255,59,47,.35),transparent);filter:blur(30px);z-index:-1}
+.app{border-radius:22px;border:1px solid var(--line2);background:linear-gradient(180deg,#141418,#0c0c0f);box-shadow:0 50px 120px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.03) inset;overflow:hidden;text-align:left}
+.app .bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.app .bar i{width:10px;height:10px;border-radius:50%;background:#2a2a30}
+.app .bar span{margin-left:12px;font-size:12px;color:var(--dim)}
+.app .body{display:grid;grid-template-columns:200px 1fr;min-height:430px}
+.side{border-right:1px solid var(--line);padding:18px 12px;font-size:13.5px;color:var(--muted)}
+.side .h{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin:14px 10px 6px}
+.side div.it{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px}
+.side div.it.on{background:rgba(255,59,47,.1);color:#fff}
+.side div.it b{width:16px;height:16px;border-radius:5px;background:#26262c;display:inline-block}
+.side div.it.on b{background:var(--red)}
+.main{padding:20px}
+.main .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:10px}
+.main .top h4{font-family:"Space Grotesk";font-size:19px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;padding:6px 10px;border-radius:8px;background:#1b1b21;border:1px solid var(--line);color:var(--muted)}
+.chip.on{color:#fff;border-color:rgba(255,59,47,.5);background:rgba(255,59,47,.12)}
+.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.v{border-radius:12px;overflow:hidden;background:#18181d;border:1px solid var(--line)}
+.v .th{aspect-ratio:9/12;position:relative;background:linear-gradient(160deg,#2a2a31,#141418)}
+.v .th img{width:100%;height:100%;object-fit:cover}
+.v .th .tag{position:absolute;top:8px;left:8px;font-size:11px;font-weight:700;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);padding:4px 7px;border-radius:6px;color:#fff}
+.v .th .tag.hot{background:var(--red)}
+.v .meta{padding:9px 10px 11px}
+.v .meta p{font-size:12px;color:#ddd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v .meta .row{display:flex;gap:6px;margin-top:7px}
+.v .meta .row span{font-size:11px;padding:3px 6px;border-radius:6px;background:#212128;color:var(--muted)}
+.v .meta .row span.g{color:var(--green);background:rgba(61,220,132,.1)}
+.cov{display:flex;align-items:flex-end;padding:12px}
+.cov em{font-style:normal;font-family:"Space Grotesk";font-weight:700;font-size:15px;line-height:1.15;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.c1{background:radial-gradient(80% 60% at 30% 30%,#5a2a26,transparent),linear-gradient(160deg,#2b1715,#0f0f12)}
+.c2{background:radial-gradient(80% 60% at 70% 30%,#3a2d24,transparent),linear-gradient(160deg,#211a16,#0f0f12)}
+.c3{background:radial-gradient(80% 60% at 40% 40%,#25303a,transparent),linear-gradient(160deg,#151b21,#0f0f12)}
+.sk{height:8px;border-radius:5px;background:#24242a;margin:6px 0}
+.sk.w60{width:60%}.sk.w80{width:80%}
+@media(max-width:860px){.app .body{grid-template-columns:1fr}.side{display:none}.vids{grid-template-columns:repeat(2,1fr)}}
+
+/* sections */
+section{padding:110px 0;position:relative}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:16px}
+.sh{text-align:center;max-width:780px;margin:0 auto 56px}
+.sh h2{font-size:clamp(34px,5vw,58px);font-weight:700;margin-bottom:16px}
+.sh p{color:var(--muted);font-size:18px}
+
+/* logos / proof strip */
+.strip{padding:40px 0 0;text-align:center;color:var(--dim);font-size:13.5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:22px}
+.stats div{background:var(--bg2);padding:26px 18px;text-align:center}
+.stats b{display:block;font-family:"Space Grotesk";font-size:clamp(26px,3.4vw,38px);letter-spacing:-.03em}
+.stats span{font-size:13px;color:var(--muted)}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* features */
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.f{padding:26px 22px;border-radius:var(--r);background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);transition:border-color .2s,transform .2s}
+.f:hover{border-color:rgba(255,59,47,.45);transform:translateY(-3px)}
+.f .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,59,47,.1);border:1px solid rgba(255,59,47,.3);margin-bottom:18px}
+.f .ic svg{width:21px;height:21px;stroke:var(--red)}
+.f h3{font-family:Inter;font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.3;margin-bottom:8px}
+.f p{font-size:14.5px;color:var(--muted)}
+.f .agent{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin-bottom:6px}
+@media(max-width:1000px){.feats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.feats{grid-template-columns:1fr}}
+
+/* how it works */
+.how{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+.steps{border-top:1px solid var(--line)}
+.step{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);color:inherit;cursor:pointer;padding:24px 0;font:inherit}
+.step .k{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);transition:color .2s}
+.step h3{font-size:clamp(22px,2.6vw,30px);font-weight:600;color:#5b5b62;margin-top:8px;transition:color .2s}
+.step p{max-height:0;overflow:hidden;opacity:0;color:var(--muted);font-size:16px;transition:max-height .35s,opacity .35s,margin .35s}
+.step.on .k{color:var(--red)}.step.on h3{color:var(--ink)}
+.step.on p{max-height:120px;opacity:1;margin-top:10px}
+.step .prog{height:2px;background:var(--line);margin-top:16px;border-radius:2px;overflow:hidden;display:none}
+.step.on .prog{display:block}
+.step .prog i{display:block;height:100%;width:0;background:var(--red)}
+.step.on .prog i{animation:fill 6s linear forwards}
+@keyframes fill{to{width:100%}}
+.panel{position:relative;aspect-ratio:1/1;max-height:560px;border-radius:26px;background:radial-gradient(70% 60% at 50% 40%,rgba(255,59,47,.22),transparent),linear-gradient(180deg,#111115,#0b0b0e);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;padding:28px}
+.scene{position:absolute;inset:0;display:grid;place-items:center;padding:30px;opacity:0;transform:translateY(14px) scale(.98);transition:opacity .45s,transform .45s;pointer-events:none}
+.scene.on{opacity:1;transform:none}
+.card{width:100%;max-width:420px;border-radius:16px;background:rgba(24,24,30,.92);border:1px solid var(--line2);padding:18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+.card h5{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card h5 i{width:8px;height:8px;border-radius:50%;background:var(--red)}
+.chan{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:#1d1d23;border:1px solid var(--line);margin-bottom:8px;font-size:14px}
+.chan .av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#ff6a5f,#7a0d07);flex:none}
+.chan .av.b{background:linear-gradient(135deg,#5f5f6a,#232328)}
+.chan small{color:var(--dim);display:block;font-size:12px}
+.chan .add{margin-left:auto;font-size:12px;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--red);color:#fff}
+.chan .add.ok{background:#25252c;color:var(--green)}
+.out{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:10px;background:#1d1d23;border:1px solid var(--line);margin-bottom:8px;font-size:13.5px}
+.out b{font-family:"Space Grotesk";color:var(--red);font-size:16px}
+.bars{display:flex;align-items:flex-end;gap:5px;height:120px;margin:6px 0 4px}
+.bars i{flex:1;background:#2a2a31;border-radius:4px 4px 0 0}
+.bars i.r{background:linear-gradient(180deg,#ff5a4f,#b8160d);box-shadow:0 0 20px -4px var(--redglow)}
+.why{font-size:13.5px;color:var(--muted);padding:9px 0;border-bottom:1px dashed var(--line)}
+.why b{color:var(--ink);font-weight:600}
+.script p{font-size:13.5px;line-height:1.5;color:#ddd;margin-bottom:8px}
+.script .hk{border-left:3px solid var(--red);padding-left:10px;color:#fff;font-weight:600}
+.ab{display:flex;gap:6px;margin-bottom:12px}
+.ab span{font-size:12px;padding:5px 10px;border-radius:8px;background:#1d1d23;border:1px solid var(--line);color:var(--muted)}
+.ab span.on{color:#fff;border-color:rgba(255,59,47,.5);background:rgba(255,59,47,.12)}
+.illus{position:absolute;bottom:14px;right:18px;font-size:11px;color:var(--dim)}
+@media(max-width:900px){.how{grid-template-columns:1fr;gap:28px}.panel{aspect-ratio:4/3.4}}
+
+/* proof */
+.proof{display:grid;grid-template-columns:1.05fr 1fr;gap:16px}
+.pc{border-radius:var(--r);background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);padding:22px;overflow:hidden}
+.pc .shot{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;margin-bottom:16px}
+.pc .n{font-family:"Space Grotesk";font-size:30px;font-weight:700;letter-spacing:-.02em}
+.pc p{color:var(--muted);font-size:14.5px}
+.pc .plat{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--red);font-weight:600;margin-bottom:6px}
+.pstack{display:grid;gap:16px}
+.vidwrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.vframe{border-radius:16px;overflow:hidden;border:1px solid var(--line2);aspect-ratio:9/16;background:#000;position:relative}
+.vframe video,.vframe iframe{width:100%;height:100%;object-fit:cover;border:0}
+.vcap{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;font-size:14px;color:var(--muted);gap:10px}
+.vcap b{font-family:"Space Grotesk";font-size:22px;color:var(--ink)}
+@media(max-width:900px){.proof{grid-template-columns:1fr}}
+@media(max-width:520px){.vidwrap{grid-template-columns:1fr}}
+
+/* solutions */
+.sols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sol{border-radius:var(--r);padding:30px 26px;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);position:relative;overflow:hidden}
+.sol:after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,59,47,.18),transparent)}
+.sol .who{font-size:12.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--red);font-weight:600}
+.sol h3{font-size:26px;margin:10px 0 12px}
+.sol p{color:var(--muted);font-size:15px;margin-bottom:16px}
+.sol ul{list-style:none;display:grid;gap:9px;font-size:14.5px}
+.sol li{display:flex;gap:10px;align-items:flex-start}
+.sol li:before{content:"";flex:none;width:16px;height:16px;margin-top:3px;border-radius:50%;background:rgba(255,59,47,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' stroke='%23ff3b2f' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+@media(max-width:900px){.sols{grid-template-columns:1fr}}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.pr{border-radius:22px;padding:30px 26px;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);display:flex;flex-direction:column}
+.pr.pop{border-color:rgba(255,59,47,.6);box-shadow:0 0 0 1px rgba(255,59,47,.3) inset,0 30px 80px -30px rgba(255,59,47,.45);position:relative}
+.pr.pop .badge{position:absolute;top:-12px;left:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:#fff;padding:5px 10px;border-radius:999px}
+.pr h3{font-size:22px}
+.pr .for{color:var(--muted);font-size:14.5px;margin:6px 0 20px;min-height:44px}
+.pr .price{font-family:"Space Grotesk";font-size:44px;font-weight:700;letter-spacing:-.03em;margin-bottom:4px}
+.pr .price small{font-size:15px;color:var(--dim);font-weight:500;font-family:Inter}
+.pr .sub{font-size:13px;color:var(--dim);margin-bottom:22px}
+.pr ul{list-style:none;display:grid;gap:10px;font-size:14.5px;color:#d6d6d9;margin-bottom:26px;flex:1}
+.pr li{display:flex;gap:10px}
+.pr li:before{content:"✓";color:var(--red);font-weight:700}
+.pr .btn{width:100%}
+.founding{margin:22px auto 0;max-width:760px;text-align:center;font-size:14.5px;color:var(--muted)}
+@media(max-width:900px){.prices{grid-template-columns:1fr}}
+
+/* bonus */
+.bonus{border-radius:28px;padding:48px;background:radial-gradient(60% 120% at 0% 0%,rgba(255,59,47,.25),transparent 60%),linear-gradient(180deg,#141418,#0d0d10);border:1px solid rgba(255,59,47,.35);display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.bonus h2{font-size:clamp(30px,4vw,46px);margin-bottom:14px}
+.bonus p{color:var(--muted);font-size:17px}
+.bonus ol{list-style:none;counter-reset:b;display:grid;gap:14px}
+.bonus li{counter-increment:b;display:flex;gap:14px;align-items:flex-start;font-size:15.5px}
+.bonus li:before{content:counter(b);flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-weight:700;font-size:14px;background:var(--red);color:#fff}
+.bonus li span{color:var(--muted);display:block;font-size:14px}
+@media(max-width:860px){.bonus{grid-template-columns:1fr;padding:30px 22px}}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-size:17.5px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:24px;font-weight:400;color:var(--red);transition:transform .2s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);font-size:16px;padding:0 0 22px;max-width:700px}
+.faqtabs{display:flex;justify-content:center;gap:6px;margin-bottom:26px;flex-wrap:wrap}
+.faqtabs button{font:600 14px Inter;padding:9px 16px;border-radius:999px;border:1px solid var(--line2);background:transparent;color:var(--muted);cursor:pointer}
+.faqtabs button.on{background:var(--ink);color:#0a0a0a;border-color:var(--ink)}
+.faqgroup{display:none}.faqgroup.on{display:block}
+
+/* final cta */
+.final{text-align:center;padding:120px 0 130px}
+.final h2{font-size:clamp(38px,6vw,72px);max-width:900px;margin:0 auto 18px}
+.final p{color:var(--muted);font-size:18px;margin-bottom:34px}
+
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--dim);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--muted);text-decoration:none}
+
+/* reveal */
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<div class="bgfx"><div class="grid"></div></div>
+
+<nav>
+ <div class="wrap">
+  <a class="brand" href="#top"><img src="logo.svg" alt="">Tidehatch</a>
+  <div class="navlinks">
+   <a href="#features">Features</a><a href="#how">How it works</a><a href="#solutions">Solutions</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+  </div>
+  <a class="btn sm" href="#join">Get early access</a>
+ </div>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<header class="hero">
+ <div class="wrap">
+  <div class="pill"><b>BETA</b><span class="dot"></span>Private beta now. Early access list is open.</div>
+  <h1>Find the <span style="white-space:nowrap">short-form</span> ideas that win, <span class="grad">before you film.</span></h1>
+  <p class="lead">Tidehatch finds the outlier videos in your niche, shows you why they took off, and turns them into scripts in your own voice. One place for every idea, script and video.</p>
+
+  <div class="wl" id="join">
+   <form id="wlform" novalidate>
+    <label class="sr" for="f-name">First name</label>
+    <input id="f-name" name="name" type="text" placeholder="First name" autocomplete="given-name" required>
+    <label class="sr" for="f-email">Email</label>
+    <input id="f-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+    <button class="btn" type="submit">Join early access</button>
+    <div class="more">
+     <label class="sr" for="f-link">Your main channel link (optional)</label>
+     <input id="f-link" name="link" type="url" placeholder="Your main channel link, optional: we use it for your free ideas report">
+    </div>
+   </form>
+   <p class="note">Founding bonus: the first 100 people get a free <b style="color:var(--ink)">7 Video Ideas report</b> for their niche. No spam, unsubscribe anytime.</p>
+   <div class="ok" role="status" aria-live="polite">
+    <h3>You're on the list.</h3>
+    <p>We'll email you the moment early access opens. If you're one of the first 100, your free 7 Video Ideas report comes with it.</p>
+   </div>
+  </div>
+
+  <div class="count" aria-label="Launch date to be announced">
+   <div class="lbl">Public launch</div>
+   <div class="cbox"><div class="n scr" data-scr>T</div><small>Days</small></div><span class="colon">:</span>
+   <div class="cbox"><div class="n scr" data-scr>B</div><small>Hours</small></div><span class="colon">:</span>
+   <div class="cbox"><div class="n scr" data-scr>A</div><small>Mins</small></div><span class="colon">:</span>
+   <div class="cbox"><div class="n" id="secs">00</div><small>Secs</small></div>
+  </div>
+
+  <!-- product mock -->
+  <div class="stage rv">
+   <div class="app" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i><span>app.tidehatch.com / ideas</span></div>
+    <div class="body">
+     <div class="side">
+      <div class="h">Research</div>
+      <div class="it on"><b></b>Outlier feed</div>
+      <div class="it"><b></b>Channels</div>
+      <div class="it"><b></b>Why it won</div>
+      <div class="h">Create</div>
+      <div class="it"><b></b>Scripts</div>
+      <div class="it"><b></b>Hatch (vault)</div>
+      <div class="h">Grow</div>
+      <div class="it"><b></b>Analytics</div>
+      <div class="it"><b></b>Ask Tidehatch</div>
+     </div>
+     <div class="main">
+      <div class="top"><h4>Outlier feed <span style="font:500 11px Inter;color:var(--dim);margin-left:6px">sample</span></h4>
+       <div class="chips"><span class="chip on">Outlier 10x+</span><span class="chip">Last 90 days</span><span class="chip">All platforms</span></div>
+      </div>
+      <div class="vids">
+       <div class="v"><div class="th"><img src="media/ex-enhanced.jpg" alt=""><span class="tag hot">Outlier</span></div>
+        <div class="meta"><p>My 5 takeaways from the Enhanced Games</p><div class="row"><span>672.6K views</span><span class="g">Saved</span></div></div></div>
+       <div class="v"><div class="th cov c1"><span class="tag hot">42x</span><em>The real reason you can't sleep</em></div><div class="meta"><p>Hook: a question you can't answer yet</p><div class="row"><span>Instagram</span><span class="g">+ Save</span></div></div></div>
+       <div class="v"><div class="th cov c2"><span class="tag hot">17x</span><em>3 myths about protein</em></div><div class="meta"><p>Format: myth list, 3 beats</p><div class="row"><span>TikTok</span><span class="g">+ Save</span></div></div></div>
+       <div class="v"><div class="th cov c3"><span class="tag hot">11x</span><em>I tried this for 30 days</em></div><div class="meta"><p>Story: before and after</p><div class="row"><span>Shorts</span><span class="g">+ Save</span></div></div></div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</header>
+
+<!-- PROOF STRIP -->
+<div class="strip">
+ <div class="wrap rv">
+  Built and tested inside MJ Creative, a short-form content agency, on real client channels.
+  <div class="stats">
+   <div><b>1M+</b><span>YouTube views, two client channels, 90 days</span></div>
+   <div><b>672K</b><span>views on one Instagram reel</span></div>
+   <div><b>111K</b><span>LinkedIn impressions in 7 days</span></div>
+   <div><b>2.5 yrs</b><span>of short-form data behind the system</span></div>
+  </div>
+ </div>
+</div>
+
+<!-- FEATURES -->
+<section id="features">
+ <div class="wrap">
+  <div class="sh rv">
+   <span class="eyebrow">Features</span>
+   <h2>Everything you need to make short-form videos that <span class="red">win</span></h2>
+   <p>Behind Tidehatch is a team of AI agents. Each one does one job well, and they hand work to each other so you don't start from a blank page.</p>
+  </div>
+  <div class="feats">
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><span class="agent">Research agent</span><h3>Find the winning channels in your niche</h3><p>Track the channels you compete with on Instagram, TikTok, YouTube Shorts and LinkedIn, in one feed.</p></div>
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><span class="agent">Outlier agent</span><h3>Spot outliers, not just popular videos</h3><p>See which videos beat their own channel's normal views by 5x, 10x, 50x. That's where the real ideas are.</p></div>
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div><span class="agent">Why-it-won agent</span><h3>Understand why each video took off</h3><p>Hook, topic, format, length and the first 3 seconds, broken down in plain words you can copy.</p></div>
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><span class="agent">Script agent</span><h3>Scripts in your voice, two versions each</h3><p>Every idea becomes an A and a B script, so each video teaches you something about your audience.</p></div>
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4z"/><path d="M4 7l3-4h10l3 4"/><path d="M10 12h4"/></svg></div><span class="agent">The Hatch</span><h3>One vault for every idea, script and video</h3><p>Save ideas, organize them into collections, and keep scripts and finished videos side by side.</p></div>
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></svg></div><span class="agent">Analytics agent</span><h3>See what's working on every platform</h3><p>Views, followers and top posts per platform, week by week, in one dashboard.</p></div>
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span class="agent">Ask Tidehatch</span><h3>A chat that remembers your channel</h3><p>Ask "what should I post next week?" and get an answer built on your own numbers and past ideas.</p></div>
+   <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></div><span class="agent">Long-form agent</span><h3>YouTube titles and ideas too</h3><p>Turn your best short-form winners into long-form video ideas and title options.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+ <div class="wrap">
+  <div class="how">
+   <div>
+    <span class="eyebrow">How it works</span>
+    <h2 style="font-size:clamp(34px,5vw,56px);margin-bottom:14px">From blank page to filmed in four steps</h2>
+    <p style="color:var(--muted);font-size:17px;margin-bottom:30px">Tidehatch does the research and the writing. You do the part only you can do: hit record.</p>
+    <div class="steps" role="tablist">
+     <button class="step on" role="tab" aria-selected="true" data-s="0"><span class="k">Step 1</span><h3>Build your feed</h3><p>Add your channel and the creators you compete with. Tidehatch watches them for you, every day.</p><div class="prog"><i></i></div></button>
+     <button class="step" role="tab" aria-selected="false" data-s="1"><span class="k">Step 2</span><h3>Find the outliers</h3><p>See the videos that beat their channel's normal views by 10x or more, ranked for your niche.</p><div class="prog"><i></i></div></button>
+     <button class="step" role="tab" aria-selected="false" data-s="2"><span class="k">Step 3</span><h3>Learn why they won</h3><p>Get the hook, topic, format and story pattern behind each winner, in plain words.</p><div class="prog"><i></i></div></button>
+     <button class="step" role="tab" aria-selected="false" data-s="3"><span class="k">Step 4</span><h3>Write winning scripts</h3><p>Turn the winning pattern into two scripts in your voice, ready to film today.</p><div class="prog"><i></i></div></button>
+    </div>
+   </div>
+   <div class="panel rv" aria-hidden="true">
+    <div class="scene on">
+     <div class="card"><h5><i></i>Your feed</h5>
+      <div class="chan"><span class="av"></span><div>your channel<small>Instagram · TikTok · YouTube</small></div><span class="add ok">Connected</span></div>
+      <div class="chan"><span class="av b"></span><div>competitor one<small>Instagram</small></div><span class="add ok">Tracking</span></div>
+      <div class="chan"><span class="av b"></span><div>competitor two<small>YouTube Shorts</small></div><span class="add ok">Tracking</span></div>
+      <div class="chan"><span class="av b"></span><div>competitor three<small>TikTok</small></div><span class="add">+ Add</span></div>
+     </div>
+    </div>
+    <div class="scene">
+     <div class="card"><h5><i></i>Outliers this week</h5>
+      <div class="bars"><i style="height:22%"></i><i style="height:30%"></i><i style="height:18%"></i><i class="r" style="height:96%"></i><i style="height:26%"></i><i style="height:34%"></i><i class="r" style="height:70%"></i><i style="height:20%"></i><i style="height:28%"></i></div>
+      <div class="out"><span>"The real reason you can't sleep"</span><b>42x</b></div>
+      <div class="out"><span>"3 myths about protein"</span><b>17x</b></div>
+     </div>
+    </div>
+    <div class="scene">
+     <div class="card"><h5><i></i>Why it won</h5>
+      <div class="why"><b>Hook:</b> a question the viewer can't answer yet</div>
+      <div class="why"><b>Topic:</b> a common habit that feels safe but isn't</div>
+      <div class="why"><b>Format:</b> talking head plus one clear diagram</div>
+      <div class="why"><b>First 3 seconds:</b> the answer is promised, not given</div>
+      <div class="why" style="border:0"><b>Length:</b> 34 seconds, one idea only</div>
+     </div>
+    </div>
+    <div class="scene">
+     <div class="card script"><h5><i></i>Script</h5>
+      <div class="ab"><span class="on">Version A</span><span>Version B</span></div>
+      <p class="hk">"You're doing this every night, and it's why you wake up tired."</p>
+      <p>Here's what's really happening when you...</p>
+      <div class="sk w80"></div><div class="sk"></div><div class="sk w60"></div>
+     </div>
+    </div>
+    <span class="illus">Illustration</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+ <div class="wrap">
+  <div class="sh rv">
+   <span class="eyebrow">Proof</span>
+   <h2>The system behind it already gets <span class="red">real views</span></h2>
+   <p>Tidehatch started as the in-house research and script system at MJ Creative. These results come from client channels it supports today.</p>
+  </div>
+  <div class="proof">
+   <div class="pc rv">
+    <div class="plat">YouTube</div>
+    <div class="shot"><img src="media/proof-yt.png" alt="YouTube Studio analytics for a client channel" loading="lazy"></div>
+    <div class="n">182,146 views</div>
+    <p>And 1,118 new subscribers in 90 days. The channel went from 290 to 6,770 subscribers. Andrew, longevity and health coach.</p>
+    <div class="vidwrap">
+     <div>
+      <div class="vframe"><video src="media/ex-enhanced.mp4" poster="media/ex-enhanced.jpg" controls preload="none" playsinline></video></div>
+      <div class="vcap"><span>Instagram reel</span><b>672,561 views</b></div>
+     </div>
+     <div>
+      <div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/r83ZVE9ieKY" title="Client YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="vcap"><span>YouTube Short</span><b>78,887 views</b></div>
+     </div>
+    </div>
+   </div>
+   <div class="pstack">
+    <div class="pc rv">
+     <div class="plat">Instagram</div>
+     <div class="shot"><img src="media/proof-ig.png" alt="Instagram insights for a client account" loading="lazy"></div>
+     <div class="n">313,500 views</div>
+     <p>And 1,100 new followers in 30 days. His best reel reached 672,561 views.</p>
+    </div>
+    <div class="pc rv">
+     <div class="plat">LinkedIn</div>
+     <div class="shot"><img src="media/proof-li.png" alt="LinkedIn analytics: 111,322 post impressions in 7 days" loading="lazy"></div>
+     <div class="n">111,322 impressions</div>
+     <p>In a single week on a client's LinkedIn.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section id="solutions">
+ <div class="wrap">
+  <div class="sh rv">
+   <span class="eyebrow">Solutions</span>
+   <h2>Built for people who post to grow a business</h2>
+  </div>
+  <div class="sols">
+   <div class="sol rv"><span class="who">Founders</span><h3>Post less, win more</h3><p>You know your stuff but not what to post. Tidehatch tells you which ideas already work in your market.</p>
+    <ul><li>Ideas backed by real view data</li><li>Scripts in your voice in minutes</li><li>One hour of filming, a month of posts</li></ul></div>
+   <div class="sol rv"><span class="who">Creators</span><h3>Stop guessing what hits</h3><p>Track the channels you compete with and catch the next outlier before everyone copies it.</p>
+    <ul><li>Daily outlier feed for your niche</li><li>Why-it-won breakdowns</li><li>A and B scripts to test hooks</li></ul></div>
+   <div class="sol rv"><span class="who">Agencies and teams</span><h3>One system, every client</h3><p>Run research, scripts and reporting for many clients from one place, the way our own agency does.</p>
+    <ul><li>A private space per client</li><li>Weekly analytics per platform</li><li>Every idea and script in one vault</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+ <div class="wrap">
+  <div class="sh rv">
+   <span class="eyebrow">Pricing</span>
+   <h2>Simple plans. Prices at launch.</h2>
+   <p>Early access members see prices first and lock in founding pricing.</p>
+  </div>
+  <div class="prices">
+   <div class="pr rv"><h3>Starter</h3><p class="for">For founders and creators posting on one or two platforms.</p>
+    <div class="price">TBA</div><div class="sub">Announced at launch</div>
+    <ul><li>Outlier feed for your niche</li><li>Why-it-won breakdowns</li><li>Scripts in your voice</li><li>The Hatch: your idea vault</li></ul>
+    <a class="btn ghost" href="#join">Join the waitlist</a></div>
+   <div class="pr pop rv"><span class="badge">Most wanted</span><h3>Pro</h3><p class="for">For people posting daily who want every number in one place.</p>
+    <div class="price">TBA</div><div class="sub">Announced at launch</div>
+    <ul><li>Everything in Starter</li><li>Analytics on every platform</li><li>Ask Tidehatch chat with memory</li><li>A and B scripts for testing</li><li>Long-form ideas and titles</li></ul>
+    <a class="btn" href="#join">Join the waitlist</a></div>
+   <div class="pr rv"><h3>Team</h3><p class="for">For agencies and teams running content for several brands.</p>
+    <div class="price">TBA</div><div class="sub">Announced at launch</div>
+    <ul><li>Everything in Pro</li><li>A private space per client</li><li>Weekly client reports</li><li>Done-for-you editing option</li></ul>
+    <a class="btn ghost" href="#join">Join the waitlist</a></div>
+  </div>
+  <p class="founding">Join before launch and you get founding pricing, held for as long as you stay subscribed.</p>
+ </div>
+</section>
+
+<!-- BONUS -->
+<section style="padding-top:20px">
+ <div class="wrap">
+  <div class="bonus rv">
+   <div>
+    <span class="eyebrow">Founding member bonus</span>
+    <h2>Join now, get your first ideas free</h2>
+    <p>Tidehatch is in private beta with our agency clients. The first 100 people on the list get a free report before launch, made with the same system.</p>
+    <a class="btn" href="#join" style="margin-top:26px">Claim my spot</a>
+   </div>
+   <ol>
+    <li><div>Free 7 Video Ideas report<span>Seven ideas for your niche, each backed by a real outlier video.</span></div></li>
+    <li><div>Founding pricing<span>Your launch price stays as long as you stay.</span></div></li>
+    <li><div>First in<span>Early access opens to the list first, in the order people joined.</span></div></li>
+   </ol>
+  </div>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+ <div class="wrap">
+  <div class="sh rv"><span class="eyebrow">FAQ</span><h2>Questions, answered</h2></div>
+  <div class="faqtabs" role="tablist">
+   <button class="on" data-g="0">General</button><button data-g="1">Early access</button><button data-g="2">Your ideas and collections</button>
+  </div>
+  <div class="faq">
+   <div class="faqgroup on">
+    <details><summary>Who is Tidehatch for?</summary><p>Founders, creators and agencies who use short-form video to grow a business, and who want to know what to post before they film it.</p></details>
+    <details><summary>Which platforms does it cover?</summary><p>Instagram Reels, TikTok, YouTube Shorts and LinkedIn for research and analytics, plus YouTube long-form ideas and titles.</p></details>
+    <details><summary>Do I have to connect my social accounts?</summary><p>No. Research and scripts work without it. Connecting your accounts adds your own analytics, so ideas and advice are built on your numbers.</p></details>
+    <details><summary>Will the scripts sound like me?</summary><p>Yes. Tidehatch learns your voice from your own videos and posts, and every script comes in two versions so you can test which one your audience likes.</p></details>
+    <details><summary>Who is behind Tidehatch?</summary><p>MJ Creative, a short-form content agency. Tidehatch is the research and script system we built for our own clients, now opening up to everyone.</p></details>
+   </div>
+   <div class="faqgroup">
+    <details><summary>When does Tidehatch launch?</summary><p>The public launch date is to be announced. It's in private beta with our agency clients now, and the early access list gets in first.</p></details>
+    <details><summary>What do I get for joining early?</summary><p>The first 100 people get a free 7 Video Ideas report for their niche. Everyone on the list gets founding pricing and first access.</p></details>
+    <details><summary>Does joining the list cost anything?</summary><p>No. Joining is free and doesn't commit you to buy. We'll email you when early access opens.</p></details>
+    <details><summary>How much will it cost?</summary><p>Prices come out at launch, and the list sees them first. There will be three plans: Starter, Pro and Team.</p></details>
+    <details><summary>What do you do with my email?</summary><p>We only use it to send Tidehatch launch news and your bonus. We never sell it, and you can unsubscribe anytime.</p></details>
+   </div>
+   <div class="faqgroup">
+    <details><summary>What is the Hatch?</summary><p>Your private vault. Every idea you save, every script you write and every finished video lives there, so nothing gets lost in notes apps and chats.</p></details>
+    <details><summary>Can I organize ideas into collections?</summary><p>Yes. Group ideas by topic, series, platform or client, and move them from idea to script to filmed to posted.</p></details>
+    <details><summary>Can I save a video from someone else's channel?</summary><p>Yes. Paste a link from Instagram, TikTok or YouTube and Tidehatch saves it to your collection with its views and a why-it-won breakdown.</p></details>
+    <details><summary>Who can see my collections?</summary><p>Only you, and anyone you invite. On the Team plan, each client gets their own private space.</p></details>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final">
+ <div class="wrap rv">
+  <h2>Stop making content that <span class="grad">doesn't work.</span></h2>
+  <p>Get on the list. Be first in when Tidehatch opens.</p>
+  <a class="btn" href="#join">Get early access</a>
+ </div>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <a class="brand" href="#top" style="font-size:17px"><img src="logo.svg" alt="" style="width:24px;height:24px">Tidehatch</a>
+  <span>© 2026 MJ Creative LLC · <a href="https://mjcreativellc.com">mjcreativellc.com</a> · <a href="mailto:contact@mjcreativellc.com">Contact</a></span>
+ </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+/* ===== Waitlist backend: Google Form (MJC Workspace) ===== */
+const WAITLIST = {
+  action: 'https://docs.google.com/forms/d/e/1FAIpQLSceYOqUMEGGlFoiyR4M1g0lTKLipEQIgLFGaSFzsKalqam6Tw/formResponse',
+  name: 'entry.2069211988', email: 'entry.914110079', link: 'entry.1756436662', source: 'entry.491240780'
+};
+(function(){
+  const wrap=document.querySelector('.wl'), f=document.getElementById('wlform');
+  try{ if(localStorage.getItem('th_joined')) wrap.classList.add('done'); }catch(e){}
+  f.addEventListener('focusin',()=>f.classList.add('open'));
+  f.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const name=f.name.value.trim(), email=f.email.value.trim(), link=f.link.value.trim();
+    if(!name){f.name.focus();return}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){f.email.focus();f.email.setCustomValidity('Enter a valid email');f.email.reportValidity();f.email.setCustomValidity('');return}
+    const btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Joining...';
+    const p=new URLSearchParams(location.search);
+    const src=['utm_source','utm_medium','utm_campaign'].map(k=>p.get(k)).filter(Boolean).join(' / ')||document.referrer||'direct';
+    if(WAITLIST.action){
+      const d=new URLSearchParams();
+      d.append(WAITLIST.name,name); d.append(WAITLIST.email,email);
+      if(WAITLIST.link) d.append(WAITLIST.link,link);
+      if(WAITLIST.source) d.append(WAITLIST.source,src);
+      try{ await fetch(WAITLIST.action,{method:'POST',mode:'no-cors',body:d}); }catch(err){}
+    }
+    try{ localStorage.setItem('th_joined','1'); }catch(e){}
+    wrap.classList.add('done');
+  });
+})();
+
+/* countdown: launch date TBA, the letters flicker, seconds tick */
+(function(){
+  const s=document.getElementById('secs'), scr=[...document.querySelectorAll('[data-scr]')], fin=['T','B','A'], ch='0123456789';
+  setInterval(()=>{ s.textContent=String(59-new Date().getSeconds()).padStart(2,'0'); },1000);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(()=>{
+    scr.forEach((el,i)=>{ let n=0; const t=setInterval(()=>{ el.textContent=ch[Math.random()*10|0]; if(++n>8){clearInterval(t);el.textContent=fin[i]} },45+i*12); });
+  },5000);
+})();
+
+/* how it works: click a step, the picture changes; auto-advances every 6 s */
+(function(){
+  const steps=[...document.querySelectorAll('.step')], scenes=[...document.querySelectorAll('.scene')];
+  let cur=0, timer;
+  function go(i){ cur=i; steps.forEach((s,j)=>{s.classList.toggle('on',j===i);s.setAttribute('aria-selected',j===i)}); scenes.forEach((s,j)=>s.classList.toggle('on',j===i));
+    steps[i].querySelector('.prog i').style.animation='none'; void steps[i].offsetWidth; steps[i].querySelector('.prog i').style.animation='';
+    clearTimeout(timer); timer=setTimeout(()=>go((cur+1)%steps.length),6000); }
+  steps.forEach((s,i)=>s.addEventListener('click',()=>go(i)));
+  go(0);
+})();
+
+/* faq tabs */
+(function(){
+  const b=[...document.querySelectorAll('.faqtabs button')], g=[...document.querySelectorAll('.faqgroup')];
+  b.forEach((x,i)=>x.addEventListener('click',()=>{b.forEach((y,j)=>y.classList.toggle('on',i===j));g.forEach((y,j)=>y.classList.toggle('on',i===j))}));
+})();
+
+/* reveal on scroll */
+(function(){
+  const els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(e=>io.observe(e));
+})();
+</script>
+</body>
+</html>
